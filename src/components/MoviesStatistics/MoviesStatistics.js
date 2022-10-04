@@ -67,7 +67,7 @@ const MovieStatistics = () => {
           {movieFunctions
             .getCoverImagesOfActor('leonardo dicaprio')
             .map((image, index) => (
-              <PreviewMovieCard image={image} />
+              <PreviewMovieCard key={index} image={image} />
             ))}
         </div>
       </div>
