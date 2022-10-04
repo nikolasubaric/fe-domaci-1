@@ -13,8 +13,12 @@ const MovieCard = ({ name, year, genre, image, actors }) => {
       <p className={classes.genre}>{genre}</p>
       <p className={classes.starring}>Starring</p>
       <ul>
-        {actors.map(actor => {
-          return <li className={classes.actor}>{actor}</li>;
+        {actors.map((actor, index) => {
+          return (
+            <li className={classes.actor} key={index}>
+              {actor}
+            </li>
+          );
         })}
       </ul>
     </div>

@@ -1,0 +1,16 @@
+.header {
+  background: linear-gradient(rgb(58, 58, 58) 10%, #000);
+  display: flex;
+  justify-content: space-around;
+}
+
+.pageBtn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  padding: 20px;
+  margin: 5px 20px;
+  background-color: dimgray;
+  border-radius: 25px;
+  box-shadow: 25px;
+}

@@ -1,0 +1,56 @@
+.inputLabel {
+  color: #fff;
+  font-size: 25px;
+}
+
+.submitBtn {
+  color: black;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+  background-color: gray;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.submitBtn:hover {
+  background-color: white;
+  width: 100px;
+  height: 35px;
+}
+
+.inputField {
+  color: black;
+  padding: 15px;
+  margin: 20px;
+  border: none;
+  border-radius: 25px;
+}
+
+input {
+  color: black;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foundMovies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.noMovies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 25px;
+}

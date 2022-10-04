@@ -1,0 +1,56 @@
+.statisticsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 25px;
+  align-items: center;
+  justify-items: center;
+  margin-top: 50px;
+}
+
+.statistic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  aspect-ratio: 1 / 1;
+  width: 270px;
+  background: linear-gradient(180deg, rgb(57, 57, 57) 1%, rgba(0, 0, 0, 0));
+  border-radius: 5px;
+}
+.statValue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.statHeading {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.listItem {
+  font-size: 18px;
+  padding-left: 10px;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.movieCards {
+  display: flex;
+  gap: 10px;
+}
+
+.movieStarring {
+  grid-area: 3/ 2 /4 /3;
+}
