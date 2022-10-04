@@ -46,7 +46,7 @@ export const movies = [
     year: 1975,
     genre: 'Drama',
     image:
-      'https://static.wikia.nocookie.net/cinemorgue/images/e/e7/Large_srr59GKJdDXPwnWlew9NoYfOvYV.jpg/revision/latest/scale-to-width-down/470?cb=20161121074858',
+      'https://m.media-amazon.com/images/M/MV5BZjA0OWVhOTAtYWQxNi00YzNhLWI4ZjYtNjFjZTEyYjJlNDVlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg',
     actors: ['Jack Nicholson', 'Louise Fletcher'],
   },
   {
@@ -77,7 +77,8 @@ export const movies = [
     name: 'Untouchable',
     year: 2011,
     genre: 'Biography',
-    image: 'https://pics.filmaffinity.com/Untouchable-113587882-large.jpg',
+    image:
+      'https://m.media-amazon.com/images/M/MV5BMTYxNDA3MDQwNl5BMl5BanBnXkFtZTcwNTU4Mzc1Nw@@._V1_FMjpg_UX1000_.jpg',
     actors: ['Francois Cluzet', 'Omar Sy'],
   },
   {

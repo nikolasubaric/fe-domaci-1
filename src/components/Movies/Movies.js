@@ -1,6 +1,7 @@
 import MoviesList from '../MoviesList/MoviesList';
 import MoviesStatistics from '../MoviesStatistics/MoviesStatistics';
 import FindMovie from '../FIndMovie/FindMovie';
+import Container from '../Container/Container';
 
 import classes from './Movies.module.css';
 import { useReducer, Fragment } from 'react';
@@ -38,19 +39,36 @@ const Movies = () => {
   return (
     <Fragment>
       <div className={classes.header}>
-        <button className={`${classes.pageBtn}`} onClick={listHandler}>
+        <button
+          className={`${classes.pageBtn} ${
+            pageState.onMoviesList ? classes.active : ''
+          }`}
+          onClick={listHandler}
+        >
           LIST
         </button>
-        <button className={`${classes.pageBtn}`} onClick={statsHandler}>
+        <button
+          className={`${classes.pageBtn} ${
+            pageState.onStatistics && classes.active
+          }`}
+          onClick={statsHandler}
+        >
           STATISTICS
         </button>
-        <button className={`${classes.pageBtn}`} onClick={searchHandler}>
+        <button
+          className={`${classes.pageBtn} ${
+            pageState.onFindMovie && classes.active
+          }`}
+          onClick={searchHandler}
+        >
           SEARCH
         </button>
       </div>
-      {pageState.onMoviesList && <MoviesList />}
-      {pageState.onStatistics && <MoviesStatistics />}
-      {pageState.onFindMovie && <FindMovie />}
+      <Container>
+        {pageState.onMoviesList && <MoviesList />}
+        {pageState.onStatistics && <MoviesStatistics />}
+        {pageState.onFindMovie && <FindMovie />}
+      </Container>
     </Fragment>
   );
 };
