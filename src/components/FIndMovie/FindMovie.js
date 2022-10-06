@@ -4,17 +4,15 @@ import { useState, useRef } from 'react';
 import { getMoviesByQuery } from '../../api/movies';
 
 const FindMovie = () => {
-  const [hasMovies, setHasMovies] = useState(false);
   const [movies, setMovies] = useState();
   const queryInputRef = useRef();
 
   const formSubmissionHandler = event => {
     event.preventDefault();
-    setHasMovies(false);
+    setMovies(undefined);
     const queryMovies = getMoviesByQuery(queryInputRef.current.value);
     if (queryMovies.length !== 0) {
       setMovies(queryMovies);
-      setHasMovies(true);
     }
   };
 
@@ -54,7 +52,7 @@ const FindMovie = () => {
         </form>
       </div>
       <div className={classes.foundMovies}>
-        {hasMovies ? (
+        {movies ? (
           generateMovies(movies)
         ) : (
           <p className={classes.noMovies}>No movies found...</p>
