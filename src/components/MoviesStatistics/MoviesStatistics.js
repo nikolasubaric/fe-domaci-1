@@ -1,30 +1,30 @@
 import classes from './MoviesStatistics.module.css';
 import * as movieFunctions from '../../api/movies';
 import PreviewMovieCard from '../PreviewMovieCard/PreviewMovieCard';
+import Statistic from '../Statistic/Statistic';
 
 const MovieStatistics = () => {
   return (
     <div className={classes.statisticsList}>
-      <div className={classes.statistic}>
-        <p className={classes.statHeading}>Total number of movies:</p>
+      <Statistic heading='Total number of movies:'>
         <p className={classes.statValue}>
           {movieFunctions.getTotalNumOfMovies()}
         </p>
-      </div>
-      <div className={classes.statistic}>
-        <p className={classes.statHeading}>Number of comedy movies:</p>
+      </Statistic>
+
+      <Statistic heading='Number of comedy movies:'>
         <p className={classes.statValue}>
           {movieFunctions.getNumOfMoviesOfGenre('comedy')}
         </p>
-      </div>
-      <div className={classes.statistic}>
-        <p className={classes.statHeading}>Number of movies from 2012:</p>
+      </Statistic>
+
+      <Statistic heading='Number of movies from 2012:'>
         <p className={classes.statValue}>
           {movieFunctions.getNumOfMoviesFromYear(2012)}
         </p>
-      </div>
-      <div className={`${classes.statistic}  ${classes.column}`}>
-        <p className={classes.statHeading}>Movies from 1990 to 1999:</p>
+      </Statistic>
+
+      <Statistic heading='Movies from 1990 to 1999:' column={true}>
         <ul>
           {movieFunctions
             .getMoviesFromYearRange(1990, 1999)
@@ -36,9 +36,9 @@ const MovieStatistics = () => {
               );
             })}
         </ul>
-      </div>
-      <div className={`${classes.statistic}  ${classes.column}`}>
-        <p className={classes.statHeading}>Drama movies from 2000 onwards:</p>
+      </Statistic>
+
+      <Statistic heading='Drama movies from 2000 onwards:' column={true}>
         <ul>
           {movieFunctions
             .getMoviesOfGenreOnFromYear('drama', 2000)
@@ -50,19 +50,15 @@ const MovieStatistics = () => {
               );
             })}
         </ul>
-      </div>
-      <div className={classes.statistic}>
-        <p className={classes.statHeading}>Last movie from list from 2010:</p>
+      </Statistic>
+
+      <Statistic heading='Last movie from list from 2010:'>
         <p className={classes.statValue}>
           {movieFunctions.getLastMovieOfYear(2010).name}
         </p>
-      </div>
-      <div
-        className={`${classes.statistic}  ${classes.column} ${classes.movieStarring}`}
-      >
-        <p className={classes.statHeading}>
-          All movie covers starring Leonardo DiCaprio:
-        </p>
+      </Statistic>
+
+      <Statistic heading='All movie covers starring Leonardo DiCaprio:' column>
         <div className={classes.movieCards}>
           {movieFunctions
             .getCoverImagesOfActor('leonardo dicaprio')
@@ -70,7 +66,7 @@ const MovieStatistics = () => {
               <PreviewMovieCard key={index} image={image} />
             ))}
         </div>
-      </div>
+      </Statistic>
     </div>
   );
 };
