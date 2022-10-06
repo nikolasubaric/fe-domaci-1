@@ -1,11 +1,12 @@
 .statistic {
   display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5px;
   aspect-ratio: 1 / 1;
-  width: 270px;
+  max-width: 270px;
   background: linear-gradient(180deg, rgb(57, 57, 57) 1%, rgba(0, 0, 0, 0));
   border-radius: 5px;
 }
@@ -41,8 +42,4 @@
 .movieCards {
   display: flex;
   gap: 10px;
-}
-
-.movieStarring {
-  grid-area: 3/ 2 /4 /3;
 }

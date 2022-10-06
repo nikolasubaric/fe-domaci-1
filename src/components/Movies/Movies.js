@@ -2,6 +2,7 @@ import MoviesList from '../MoviesList/MoviesList';
 import MoviesStatistics from '../MoviesStatistics/MoviesStatistics';
 import FindMovie from '../FIndMovie/FindMovie';
 import Container from '../Container/Container';
+import Header from '../Header/Header';
 
 import classes from './Movies.module.css';
 import { Fragment, useState } from 'react';
@@ -22,6 +23,14 @@ const Movies = () => {
 
   return (
     <Fragment>
+      <Header
+        buttons={[
+          { text: 'LIST', onClick: listHandler },
+          { text: 'STATS', onClick: statsHandler },
+          { text: 'SEARCH', onClick: searchHandler },
+        ]}
+        page={page}
+      />
       <div className={classes.header}>
         <button
           className={clsx(classes.pageBtn, {

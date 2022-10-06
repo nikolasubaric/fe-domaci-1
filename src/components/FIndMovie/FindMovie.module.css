@@ -41,6 +41,7 @@ input {
 
 .foundMovies {
   display: flex;
+  flex: 1 1 0;
   flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
@@ -53,4 +54,17 @@ input {
   align-items: center;
 
   font-size: 25px;
+}
+
+@media only screen and (max-width: 450px) {
+  .inputField {
+    padding: 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+  }
+
+  .inputLabel {
+    padding-left: 10px;
+  }
 }
