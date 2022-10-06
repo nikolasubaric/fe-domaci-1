@@ -5,6 +5,7 @@ import Container from '../Container/Container';
 
 import classes from './Movies.module.css';
 import { Fragment, useState } from 'react';
+import clsx from 'clsx';
 
 const Movies = () => {
   const [page, setPage] = useState('list');
@@ -23,23 +24,25 @@ const Movies = () => {
     <Fragment>
       <div className={classes.header}>
         <button
-          className={`${classes.pageBtn} ${
-            page === 'list' ? classes.active : ''
-          }`}
+          className={clsx(classes.pageBtn, {
+            [classes.active]: page === 'list',
+          })}
           onClick={listHandler}
         >
           LIST
         </button>
         <button
-          className={`${classes.pageBtn} ${page === 'stats' && classes.active}`}
+          className={clsx(classes.pageBtn, {
+            [classes.active]: page === 'stats',
+          })}
           onClick={statsHandler}
         >
           STATISTICS
         </button>
         <button
-          className={`${classes.pageBtn} ${
-            page === 'search' && classes.active
-          }`}
+          className={clsx(classes.pageBtn, {
+            [classes.active]: page === 'search',
+          })}
           onClick={searchHandler}
         >
           SEARCH
